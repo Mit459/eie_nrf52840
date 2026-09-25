@@ -1,0 +1,185 @@
+# GIT CHEATSHEET
+
+1. git commit
+
+---
+
+What it does:
+Saves the changes that have been added to the staging area as a new commit in the local Git repository.
+
+Basic syntax:
+git commit
+
+Useful argument:
+git commit -m "commit message"
+
+The -m option lets you write the commit message directly in the command.
+
+Example:
+git commit -m "Add Git cheatsheet"
+
+Note:
+git commit by itself opens a text editor so you can enter the commit message.
+
+2. git branch
+
+---
+
+What it does:
+Creates, lists, or deletes branches.
+
+Basic syntax:
+git branch
+
+With no arguments:
+git branch
+
+Lists the branches in the repository. The current branch is marked with *.
+
+One argument:
+git branch lesson2
+
+Creates a new branch called lesson2.
+
+Example:
+git branch lesson2
+
+Note:
+Creating a branch does not switch to it. Use git checkout to switch branches.
+
+3. git checkout
+
+---
+
+What it does:
+Switches from one branch to another.
+
+Basic syntax:
+git checkout <branch>
+
+Example:
+git checkout main
+
+Switches to the main branch.
+
+Another example:
+git checkout lesson2
+
+Switches to the lesson2 branch.
+
+Note:
+The number of arguments changes the function when used with certain options. For example,
+git checkout -b lesson2
+creates a new branch AND switches to it.
+
+4. git pull
+
+---
+
+What it does:
+Downloads changes from a remote repository and integrates them into the current local branch.
+
+Basic syntax:
+git pull
+
+With no arguments:
+git pull
+
+Gets changes from the current branch's configured remote.
+
+With arguments:
+git pull <remote> <branch>
+
+Example:
+git pull upstream main
+
+Gets the main branch from the upstream remote and integrates it into the current branch.
+
+Another example:
+git pull origin main
+
+Gets the main branch from your origin remote.
+
+5. git push
+
+---
+
+What it does:
+Uploads local commits to a remote repository.
+
+Basic syntax:
+git push <remote> <branch>
+
+Example:
+git push origin main
+
+Pushes the local main branch to the main branch on origin.
+
+Another example:
+git push origin lesson2
+
+Pushes the lesson2 branch to your GitHub fork.
+
+Note:
+origin normally refers to your fork, while upstream refers to the original EiE repository.
+
+6. git merge
+
+---
+
+What it does:
+Combines the changes from one branch into the branch you are currently on.
+
+Basic syntax:
+git merge <branch>
+
+Example:
+git checkout main
+git merge lesson2
+
+This switches to main and then merges the changes from lesson2 into main.
+
+Important:
+The branch named in the merge command is merged INTO the current branch.
+
+7. git rebase
+
+---
+
+What it does:
+Moves or reapplies commits from one branch onto another starting point.
+
+Basic syntax:
+git rebase <branch>
+
+Example:
+git checkout lesson2
+git rebase main
+
+This reapplies the commits from lesson2 on top of the current main branch.
+
+Note:
+Rebase changes the history of the branch by creating new commits based on a different starting point.
+
+8. git fetch
+
+---
+
+What it does:
+Downloads information about changes from a remote repository without changing your current working files or branch.
+
+Basic syntax:
+git fetch <remote> <branch>
+
+Example:
+git fetch upstream main
+
+Downloads the latest information from the main branch of the upstream repository.
+
+After fetching, the remote branch can be viewed as:
+upstream/main
+
+Note:
+git fetch does NOT automatically merge the downloaded changes into your current branch.
+
+This is different from git pull, which fetches changes and then integrates them into the current branch.
