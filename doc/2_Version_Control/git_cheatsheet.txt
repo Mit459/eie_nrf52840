@@ -183,3 +183,91 @@ Note:
 git fetch does NOT automatically merge the downloaded changes into your current branch.
 
 This is different from git pull, which fetches changes and then integrates them into the current branch.
+
+
+9. git add
+
+---
+
+What it does:
+Adds changes to the staging area so they can be included in the next commit.
+
+Basic syntax:
+git add <file>
+
+Example:
+git add doc/2_Version_Control/git_cheatsheet.txt
+
+Stages the specified file for the next commit.
+
+Another example:
+git add .
+
+Stages all changes in the current directory and its subdirectories.
+
+Note:
+git add does not create a commit. It only stages the changes.
+
+
+10. git status
+
+---
+
+What it does:
+Shows the current state of the working directory and staging area.
+
+Basic syntax:
+git status
+
+Example:
+git status
+
+Shows which files are untracked, modified, or staged for a commit.
+
+Note:
+git status is useful for checking what will be included in the next commit.
+
+
+11. git log
+
+---
+
+What it does:
+Shows the commit history of the repository.
+
+Basic syntax:
+git log
+
+Example:
+git log
+
+Shows the newest commits first, with older commits below them.
+
+Note:
+The current commit is shown with HEAD. For example:
+HEAD -> lesson2
+
+This means HEAD is currently pointing to the lesson2 branch.
+
+If git log opens a pager and a colon appears at the bottom of the terminal, press:
+q
+
+to return to the normal terminal.
+
+12. git diff
+
+---
+
+What it does:
+Shows the differences between changes in your working directory and the last committed version.
+
+Basic syntax:
+git diff
+
+Example:
+git diff
+
+Shows changes that have not yet been staged.
+
+Note:
+git diff is useful for reviewing exactly what has changed before staging and committing it
